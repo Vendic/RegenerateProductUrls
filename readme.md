@@ -1,4 +1,4 @@
-Vendic RegenerateProductUrls Extension
+Magento 2 RegenerateProductUrls Extension
 =====================
 
 Description
