@@ -1,7 +1,7 @@
 {
     "name": "vendic/module-regenerateproducturls",
     "description": "Add your description here",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "require": {
         "php": "~7.0",
         "magento/framework": "100.1.*",
