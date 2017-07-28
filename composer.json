@@ -1,6 +1,7 @@
 {
     "name": "vendic/module-regenerateproducturls",
     "description": "Add your description here",
+    "version": "0.0.1",
     "type": "magento2-module",
     "license": [
         "proprietary"
