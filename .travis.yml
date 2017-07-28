@@ -14,6 +14,10 @@ addons:
   hosts:
     # should match PULSESTORM_MAGE2_FAKE_URL above
     - magento-2-travis.dev
+branches:
+  only:
+  - gh-pages
+  - /.*/
 language: php
 sudo: required
 dist: trusty
