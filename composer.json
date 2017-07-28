@@ -2,6 +2,12 @@
     "name": "vendic/module-regenerateproducturls",
     "description": "Add your description here",
     "version": "0.0.1",
+    "require": {
+        "php": "~7.0",
+        "magento/framework": "100.1.*",
+        "magento/module-catalog-url-rewrite": "100.1.*",
+        "magento/magento-composer-installer": "*"
+    },
     "type": "magento2-module",
     "license": [
         "proprietary"

@@ -16,7 +16,7 @@ php:
   - 7.0
 env:
   global:
-    - MAGENTO_CE_VERSION=2.1.5
+    - MAGENTO_CE_VERSION=2.1.7
     - COMPOSER_BIN_DIR=~/bin
 cache:
   apt: true
@@ -29,7 +29,6 @@ before_install:
   # Clone main magento github repository
   - git clone https://github.com/magento/magento2 --branch $MAGENTO_CE_VERSION --depth 1
   - cd magento2
-  - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
-  - composer require $TRAVIS_REPO_SLUG dev-$BRANCH
+  - composer require vendic/module-regenerateproducturls
 before_script: ./dev/travis/before_script.sh
 script: vendor/bin/phpunit -c dev/tests/unit/phpunit.xml
