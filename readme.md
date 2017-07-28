@@ -1,4 +1,4 @@
-Magento 2 RegenerateProductUrls Extension
+Magento 2 RegenerateProductUrls Extension [![Build Status](https://travis-ci.org/Vendic/RegenerateProductUrls.svg?branch=master)](https://travis-ci.org/Vendic/RegenerateProductUrls)
 =====================
 
 Description
@@ -24,9 +24,12 @@ composer require vendic/module-regenerateproducturls
 php bin/magento setup:upgrade
 ```
 
-Manual activation
+Manual activation 
 -------------------------
-`n98-magerun2.phar sys:cron:run vendic_regenerateurls`
+- Install [n98-magerun2](https://github.com/netz98/n98-magerun2)
+```
+n98-magerun2.phar sys:cron:run vendic_regenerateurls
+```
 
 Uninstallation
 --------------
