@@ -37,5 +37,8 @@ before_script:
 script:
   - $COMPOSER_BIN_DIR/phpunit -c dev/tests/unit/phpunit.custom.xml.dist
 after_script:
+  - mysql -e 'DROP DATABASE IF EXISTS magentotravis'
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS magentotravis;'
+  - php bin/magento setup:install --base-url=https://www.testshop.nl/ --db-host=localhost --db-name=magentotravis --db-user=root --admin-firstname=Dieter --admin-lastname=Demo --admin-email=dieterdemo@payone.com --admin-user=DieterDemo --admin-password=72q980hdfq2378ga9w87dg6 --language=de_DE --currency=EUR --timezone=Europe/Berlin
   - php bin/magento setup:upgrade
   - if php bin/magento setup:di:compile | grep "Errors during compilation"; then exit 1; fi
