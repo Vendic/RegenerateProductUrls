@@ -24,9 +24,12 @@ composer require vendic/module-regenerateproducturls
 php bin/magento setup:upgrade
 ```
 
-Manual activation
+Manual activation 
 -------------------------
-`n98-magerun2.phar sys:cron:run vendic_regenerateurls`
+- Install [n98-magerun2](https://github.com/netz98/n98-magerun2)
+```
+n98-magerun2.phar sys:cron:run vendic_regenerateurls
+```
 
 Uninstallation
 --------------
