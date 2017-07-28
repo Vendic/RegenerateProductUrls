@@ -30,5 +30,12 @@ before_install:
   - git clone https://github.com/magento/magento2 --branch $MAGENTO_CE_VERSION --depth 1
   - cd magento2
   - composer require vendic/module-regenerateproducturls
-before_script: ./dev/travis/before_script.sh
-script: vendor/bin/phpunit -c dev/tests/unit/phpunit.xml
+before_script:
+  - chmod +x ./dev/travis/before_script.sh
+  - ./dev/travis/before_script.sh
+  - cp $TRAVIS_BUILD_DIR/phpunit.custom.xml.dist dev/tests/unit/phpunit.custom.xml.dist
+script:
+  - $COMPOSER_BIN_DIR/phpunit -c dev/tests/unit/phpunit.custom.xml.dist
+after_script:
+  - php bin/magento setup:upgrade
+  - if php bin/magento setup:di:compile | grep "Errors during compilation"; then exit 1; fi
