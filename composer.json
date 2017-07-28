@@ -1,0 +1,24 @@
+{
+    "name": "vendic/module-regenerateproducturls",
+    "description": "Add your description here",
+    "type": "magento2-module",
+    "license": [
+        "proprietary"
+    ],
+    "authors":[
+        {
+            "name":"Tjitse Efde",
+            "email":"tjitse@vendic.nl"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Vendic\\RegenerateProductUrls\\": ""
+        }
+    }
+}
