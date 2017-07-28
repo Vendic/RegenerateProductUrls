@@ -1,4 +1,4 @@
-Magento 2 RegenerateProductUrls Extension
+Magento 2 RegenerateProductUrls Extension [![Build Status](https://travis-ci.org/Vendic/RegenerateProductUrls.svg?branch=master)](https://travis-ci.org/Vendic/RegenerateProductUrls)
 =====================
 
 Description
