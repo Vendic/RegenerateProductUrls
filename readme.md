@@ -56,3 +56,8 @@ Licence
 Copyright
 ---------
 (c) 2017 Vendic
+
+
+### About Vendic
+[Vendic](https://www.vendic.nl "Vendic Homepage") develops technically challenging e-commerce websites using Magento 2, as well as innovative headless PWA shops. Feel free to check out our projects on our website.
+
